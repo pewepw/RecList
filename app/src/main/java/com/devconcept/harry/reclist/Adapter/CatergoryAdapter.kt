@@ -13,10 +13,7 @@ import com.devconcept.harry.reclist.R
 /**
  * Created by Harry on 17/11/2017.
  */
-class CatergoryAdapter(context: Context, categories: List<Category>): BaseAdapter() {
-
-    val context = context
-    val categories = categories
+class CatergoryAdapter(val context: Context, val categories: List<Category>): BaseAdapter() {
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val categoryView: View
