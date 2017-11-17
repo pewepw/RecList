@@ -15,24 +15,35 @@ object DataService {
     )
 
     val hats = listOf(
-            Product("Adidas Hat", "RM90", "hat01"),
-            Product("Nike Hat", "RM110", "hat02"),
-            Product("Puma Hat", "RM82", "hat03"),
-            Product("Under Amour Hat", "RM150", "hat04")
+            Product("Adidas Hat", "RM90", "hat1"),
+            Product("Nike Hat", "RM110", "hat2"),
+            Product("Puma Hat", "RM82", "hat3"),
+            Product("Under Amour Hat", "RM150", "hat4")
     )
 
     val hoodies = listOf(
-            Product("Adidas Hoodie", "RM90", "hoodie01"),
-            Product("Nike Hoodie", "RM110", "hoodie02"),
-            Product("Puma Hoodie", "RM82", "hoodie03"),
-            Product("Under Amour Hoodie", "RM150", "hoodie04")
+            Product("Adidas Hoodie", "RM90", "hoodie1"),
+            Product("Nike Hoodie", "RM110", "hoodie2"),
+            Product("Puma Hoodie", "RM82", "hoodie3"),
+            Product("Under Amour Hoodie", "RM150", "hoodie4")
     )
 
-    val shirt = listOf(
-            Product("Adidas Shirt", "RM90", "shirt01"),
-            Product("Nike Shirt", "RM110", "shirt02"),
-            Product("Puma Shirt", "RM82", "shirt03"),
-            Product("Under Amour Shirt", "RM150", "shirt04"),
-            Product("Gucci Shirt", "RM200", "shirt05")
+    val shirts = listOf(
+            Product("Adidas Shirt", "RM90", "shirt1"),
+            Product("Nike Shirt", "RM110", "shirt2"),
+            Product("Puma Shirt", "RM82", "shirt3"),
+            Product("Under Amour Shirt", "RM150", "shirt4"),
+            Product("Gucci Shirt", "RM200", "shirt5")
     )
+
+    val digitalGood = listOf<Product>()
+
+    fun getProducts(category: String): List<Product> {
+        when(category) {
+            "SHIRTS" -> return shirts
+            "HATS" -> return hats
+            "HOODIES" -> return hoodies
+            else -> return digitalGood
+        }
+    }
 }
